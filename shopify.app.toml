@@ -1,0 +1,23 @@
+name = "Shopify Headless PWA"
+handle = "shopify-headless-pwa"
+client_id = "YOUR_APP_CLIENT_ID"
+
+[build]
+automatically_update_urls_on_dev = true
+
+[access_scopes]
+# Storefront is separate; these are Admin scopes.
+scopes = "read_products,write_customers,read_orders"
+
+[auth]
+redirect_urls = [
+  "https://localhost:3000/auth/callback",
+  "https://your-production-domain.com/auth/callback"
+]
+
+[webhooks]
+api_version = "2025-10"
+
+[storefront]
+storefront_access_token = "YOUR_STOREFRONT_TOKEN"
+api_version = "2025-10"
