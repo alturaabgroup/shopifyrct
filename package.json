@@ -15,7 +15,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@shopify/hydrogen-react": "^2025.10.0",          
+    "@shopify/hydrogen-react": "^2025.7.0",          
     "@apollo/client": "^3.13.0",                     
     "graphql": "^16.10.0",
     "firebase": "^11.0.0",
