@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-gray-200;
+  }
+  
+  body {
+    @apply font-sans text-gray-900 bg-white antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-semibold;
+  }
+}
+
+@layer components {
+  /* Button Styles */
+  .btn {
+    @apply px-6 py-3 rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+  
+  .btn-primary {
+    @apply bg-gray-900 text-white hover:bg-gray-800 focus:ring-gray-900;
+  }
+  
+  .btn-secondary {
+    @apply bg-white text-gray-900 border-2 border-gray-900 hover:bg-gray-50 focus:ring-gray-900;
+  }
+  
+  .btn-outline {
+    @apply bg-transparent text-gray-900 border border-gray-300 hover:bg-gray-50 focus:ring-gray-400;
+  }
+  
+  .btn-sm {
+    @apply px-4 py-2 text-sm;
+  }
+  
+  .btn-lg {
+    @apply px-8 py-4 text-lg;
+  }
+  
+  /* Input Styles */
+  .input {
+    @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent transition-all;
+  }
+  
+  /* Card Styles */
+  .card {
+    @apply bg-white rounded-lg shadow-soft overflow-hidden;
+  }
+  
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-medium hover:-translate-y-1;
+  }
+  
+  /* Badge Styles */
+  .badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium;
+  }
+  
+  .badge-primary {
+    @apply bg-gray-900 text-white;
+  }
+  
+  .badge-success {
+    @apply bg-green-100 text-green-800;
+  }
+  
+  .badge-warning {
+    @apply bg-yellow-100 text-yellow-800;
+  }
+  
+  .badge-danger {
+    @apply bg-red-100 text-red-800;
+  }
+  
+  /* Product Grid */
+  .product-grid {
+    @apply grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4 lg:gap-6;
+  }
+  
+  /* Container */
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  /* Mobile Menu */
+  .mobile-menu-open {
+    @apply fixed inset-0 z-50 overflow-y-auto;
+  }
+  
+  /* Animations */
+  .animate-in {
+    @apply animate-fade-in;
+  }
+  
+  .animate-up {
+    @apply animate-slide-up;
+  }
+}
+
+@layer utilities {
+  /* Custom Scrollbar */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Aspect Ratios */
+  .aspect-product {
+    aspect-ratio: 3/4;
+  }
+  
+  .aspect-banner {
+    aspect-ratio: 16/9;
+  }
+  
+  /* Text Truncate */
+  .line-clamp-1 {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+/* Custom Mobile-First Styles */
+@media (max-width: 640px) {
+  .mobile-bottom-nav {
+    @apply fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-lg z-40;
+  }
+  
+  .mobile-search-bar {
+    @apply sticky top-0 z-30 bg-white shadow-sm;
+  }
+}
+
+/* Loading States */
+.skeleton {
+  @apply animate-pulse bg-gray-200 rounded;
+}
+
+/* Product Image Hover Effect */
+.product-image-wrapper {
+  @apply relative overflow-hidden;
+}
+
+.product-image-wrapper img {
+  @apply transition-transform duration-300;
+}
+
+.product-image-wrapper:hover img {
+  @apply scale-105;
+}
+
+/* Filter Drawer */
+.filter-drawer {
+  @apply fixed inset-y-0 left-0 w-80 bg-white shadow-xl transform transition-transform duration-300 z-50;
+}
+
+.filter-drawer.closed {
+  @apply -translate-x-full;
+}
+
+/* Price Style */
+.price {
+  @apply text-lg font-bold text-gray-900;
+}
+
+.price-original {
+  @apply text-sm text-gray-500 line-through;
+}
+
+.price-discount {
+  @apply text-sm text-red-600 font-semibold;
+}
