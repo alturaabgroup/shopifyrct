@@ -42,5 +42,8 @@ export class NotificationManager {
       callback(payload);
     });
   }
-}
+
+  static async initFCM(): Promise<string | null> {
+    return await this.requestPermissionAndGetToken();
   }
+}

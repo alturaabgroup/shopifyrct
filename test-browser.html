@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Browser Test</title>
+</head>
+<body>
+    <h1>Testing Shopify App</h1>
+    <div id="test-results"></div>
+    <script>
+        async function testApp() {
+            const results = document.getElementById('test-results');
+            
+            try {
+                const response = await fetch('http://localhost:5173/');
+                const html = await response.text();
+                
+                results.innerHTML = `
+                    <h2>Server Status: ✅ Running</h2>
+                    <h3>Response Preview:</h3>
+                    <pre>${html.substring(0, 500)}</pre>
+                    <br>
+                    <a href="http://localhost:5173/" target="_blank">Open App in New Tab</a>
+                `;
+            } catch (error) {
+                results.innerHTML = `
+                    <h2>Server Status: ❌ Error</h2>
+                    <p>${error.message}</p>
+                `;
+            }
+        }
+        
+        testApp();
+    </script>
+</body>
+</html>
