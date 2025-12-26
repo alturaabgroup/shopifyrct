@@ -8,8 +8,8 @@ services:
     environment:
       NODE_ENV: production
       PORT: 4000
-      SHOPIFY_STORE_DOMAIN: your-shop.myshopify.com
-      SHOPIFY_STOREFRONT_TOKEN: your_storefront_token
+      SHOPIFY_STORE_DOMAIN: quickstart-535f4b8d.myshopify.com
+      SHOPIFY_STOREFRONT_TOKEN: a20a3b321f8f4ffa3e358acbc25b7cde
     ports:
       - "4000:4000"
     networks:

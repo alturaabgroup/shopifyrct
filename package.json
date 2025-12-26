@@ -15,8 +15,8 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@shopify/hydrogen-react": "^2025.10.0",          // target API-compatible release when published
-    "@apollo/client": "^3.13.0",                      // optional: if we want Apollo, or we can roll our own fetch client
+    "@shopify/hydrogen-react": "^2025.10.0",          
+    "@apollo/client": "^3.13.0",                     
     "graphql": "^16.10.0",
     "firebase": "^11.0.0",
     "workbox-core": "^7.1.0",
@@ -28,7 +28,7 @@
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@shopify/api-codegen-preset": "^0.1.0",          // adjust to latest
+    "@shopify/api-codegen-preset": "^1.2.1",         
     "@types/node": "^22.0.0",
     "@types/react": "^18.3.0",
     "@types/react-dom": "^18.3.0",

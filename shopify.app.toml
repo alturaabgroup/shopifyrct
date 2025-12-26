@@ -1,6 +1,6 @@
-name = "Shopify Headless PWA"
+name = "SHP Headless PWA"
 handle = "shopify-headless-pwa"
-client_id = "YOUR_APP_CLIENT_ID"
+client_id = "cec3787d1e417ec63c8220a3aa8f7a6a"
 
 [build]
 automatically_update_urls_on_dev = true
@@ -19,5 +19,5 @@ redirect_urls = [
 api_version = "2025-10"
 
 [storefront]
-storefront_access_token = "YOUR_STOREFRONT_TOKEN"
+storefront_access_token = "a20a3b321f8f4ffa3e358acbc25b7cde"
 api_version = "2025-10"
