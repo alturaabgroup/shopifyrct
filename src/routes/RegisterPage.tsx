@@ -218,9 +218,3 @@ const RegisterPage: React.FC = () => {
 };
 
 export default RegisterPage;
-      </form>
-    </div>
-  );
-};
-
-export default RegisterPage;
